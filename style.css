@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+
+.hero {
+    height: 600px;
+
+    background-image: 
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("imagens/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 8%;
+
+    color: white;
+}
+
+
+.hero-content {
+    max-width: 600px;
+}
+
+
+.hero-subtitle {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h2 {
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-text {
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-button {
+    display: inline-block;
+
+    background-color: white;
+
+    color: #111;
+
+    padding: 16px 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.hero-button:hover {
+    background-color: #111;
+
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        height: 500px;
+
+        padding: 30px;
+    }
+
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+}
