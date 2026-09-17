@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Peace | Loja Oficial</title>
+    <title>Ténis | La Peace</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,26 +13,95 @@
 
 <body>
 
-    
+    <!-- Header -->
     <header>
         <div class="logo">
             <img src="peace.jpg" alt="Logo Peace">
             <h1>La Peace</h1>
         </div>
 
-        
         <div class="search-box">
             <form action="#" method="GET">
-                <input type="text" placeholder="Pesquisar produtos..." name="search">
+                <input type="text" placeholder="Pesquisar ténis..." name="search">
                 <button type="submit">🔍</button>
             </form>
         </div>
 
-        
         <nav>
-            <a href="index.html" class="active">Início</a>
+            <a href="index.html">Início</a>
             <a href="roupa.html">Roupa</a>
-            <a href="tenis.html">Ténis</a>
+            <a href="tenis.html" class="active">Ténis</a>
             <a href="acessorios.html">Acessórios</a>
         </nav>
     </header>
+
+    <!-- Banner da Categoria Ténis -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=1600&auto=format&fit=crop');">
+        <div class="hero-content">
+            <h2>Coleção de Ténis</h2>
+            <p>Encontra o par perfeito para elevar o teu estilo urbano.</p>
+        </div>
+    </section>
+
+    <!-- Grelha Exclusiva de Ténis -->
+    <main class="container">
+        <h2 class="section-title">Modelos em Destaque</h2>
+        
+        <div class="categories-grid">
+            
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>Urban Red Sneaker</h3>
+                    <span>89,99 €</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>Classic White</h3>
+                    <span>74,99 €</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>Street Minimalist</h3>
+                    <span>99,99 €</span>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-bg" style="background-image: url('https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=800&auto=format&fit=crop');"></div>
+                <div class="card-content">
+                    <h3>Retro Runner</h3>
+                    <span>109,99 €</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+   <section class="info-section">
+
+            <div class="info-column" style="text-align: center;">
+        <br>
+        <h3>Contactos</h3>
+        <p>📍 Estremoz, Portugal</p>
+        <p>📧 <a href="mailto:tiago.meneses988@gmail.com" style="color: inherit; text-decoration: none;">tiago.meneses988@gmail.com</a></p>
+        <p>📞 +351 965 142 884</p>
+    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 La Peace. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
