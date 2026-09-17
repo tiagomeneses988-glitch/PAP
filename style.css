@@ -244,3 +244,78 @@ footer {
         font-size: 36px;
     }
 }
+
+.info-section {
+    background-color: #161616;
+    border-top: 1px solid #222;
+    padding: 20px 8%;
+    margin-top: 30px;
+}
+
+.info-container {
+    max-width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.info-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 2px solid #333;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.info-column p, .info-column li {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.info-column ul {
+    list-style: none;
+}
+
+.info-column a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-column a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    background-color: #222;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #fff;
+    border: 1px solid #333;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #333;
+    border-color: #555;
+}
+
+.email-link {
+    color: inherit;          
+    text-decoration: none;   
+}
+
+.email-link:hover {
+    color: #fff;             
+}
