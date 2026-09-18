@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Produto | La Peace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Imagens/peace.jpg" alt="Logo Peace">
+            <h1>La Peace</h1>
+        </div>
+
+        <div class="search-box">
+            <form action="#" method="GET">
+                <input type="text" placeholder="Pesquisar produtos..." name="search">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="roupa.html">Roupa</a>
+            <a href="tenis.html" class="active">Ténis</a>
+            <a href="acessorios.html">Acessórios</a>
+        </nav>
+
+        <div class="cart-box">
+            <a href="carrinho.html" class="cart-icon" title="Ver Carrinho">
+                🛒
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container product-page">
+        <div class="product-gallery">
+            <img id="main-img" src="" alt="Foto Principal" class="main-image">
+            
+            <div class="thumbnail-list" id="thumbnail-list">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h2 id="product-title"></h2>
+            <p class="price" id="product-price"></p>
+            <p class="description" id="product-description"></p>
+
+            <div class="options">
+                <label for="size">Tamanho:</label>
+                <select id="size">
+                    <option>39</option>
+                    <option>40</option>
+                    <option>41</option>
+                    <option>42</option>
+                    <option>43</option>
+                </select>
+            </div>
+
+            <button class="add-to-cart-btn" onclick="addToCart()">Adicionar ao Carrinho 🛒</button>
+        </div>
+    </main>
+
+    <section class="info-section">
+        <div class="info-column" style="text-align: center;">
+            <br>
+            <h3>Contactos</h3>
+            <p>📍 Estremoz, Portugal</p>
+            <p>📧 <a href="mailto:tiago.meneses988@gmail.com" style="color: inherit; text-decoration: none;">tiago.meneses988@gmail.com</a></p>
+            <p>📞 +351 965 142 884</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 La Peace. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const produtos = {
+            jordan4: {
+                titulo: "Air Jordan 4 Retro Flight Club",
+                preco: "209,99 €",
+                descricao: "Para voar como MJ, tinhas de te juntar ao clube. O Air Jordan Flight Club. Estas AJ4 honram a herança e a nostalgia do popular programa de adesão por correio dos anos 80 e 90.",
+                imagens: [
+                    "Imagens/airjordan4retro.avif",
+                    "Imagens/airjordan4retro2.avif",
+                    "Imagens/airjordan4retro3.avif",
+                    "Imagens/airjordan4retro4.avif"
+                ]
+            },
+            airmaxplus: {
+                titulo: "Nike Air Max Plus",
+                preco: "189,99 €",
+                descricao: "Revela a tua atitude com as Nike Air Max Plus, uma experiência Tuned Air que oferece estabilidade premium e um amortecimento incrível.",
+                imagens: [
+                    "Imagens/airmaxplusbranco.avif",
+                    "Imagens/airmaxplusbranco2.avif",
+                    "Imagens/airmaxplusbranco3.avif",
+                    "Imagens/airmaxplusbranco4.avif"
+                ]
+            },
+            p6000: {
+                titulo: "Nike P-6000",
+                preco: "119,99 €",
+                descricao: "Uma fusão de sapatilhas Pegasus do passado, as Nike P-6000 levam o estilo de corrida dos anos 2000 a um nível moderno.",
+                imagens: [
+                    "Imagens/nikep6000.avif",
+                    "Imagens/nikep60002.avif",
+                    "Imagens/nikep60003.avif",
+                    "Imagens/nikep60004.avif"
+                ]
+            },
+            airmax95: {
+                titulo: "Nike Air Max 95 Big Bubble",
+                preco: "149,99 €",
+                descricao: "Inspiradas no corpo humano e na estética do atletismo dos anos 90, oferecem conforto inacreditável e um estilo marcante.",
+                imagens: [
+                    "Imagens/nikeairmax95bigbubble.avif",
+                    "Imagens/nikeairmax95bigbubble2.avif",
+                    "Imagens/nikeairmax95bigbubble3.avif",
+                    "Imagens/nikeairmax95bigbubble4.avif"
+                ]
+            },
+            af1edge: {
+                titulo: "Nike Air Force 1 '07 Edge",
+                preco: "129,99 €",
+                descricao: "O brilho continua vivo nas Nike Air Force 1 '07, o modelo original do basquetebol que dá um toque inovador ao que melhor conheces.",
+                imagens: [
+                    "Imagens/airforce1edge.avif",
+                    "Imagens/airforce1edge2.avif",
+                    "Imagens/airforce1edge3.avif",
+                    "Imagens/airforce1edge4.avif",
+                    "Imagens/airforce1edge5.avif"
+                ]
+            },
+            shox: {
+                titulo: "Nike Shox TL",
+                preco: "169,99 €",
+                descricao: "Leva o amortecimento mecânico a um novo nível. Uma versão reequipada do ícone de 2003.",
+                imagens: [
+                    "Imagens/shoxbranco.avif",
+                    "Imagens/shoxbranco2.avif",
+                    "Imagens/shoxbranco3.avif",
+                    "Imagens/shoxbranco4.avif"
+                ]
+            },
+            af1: {
+                titulo: "Nike Air Force 1",
+                preco: "109,99 €",
+                descricao: "Lendárias, confortáveis e atemporais. O clássico indispensável em qualquer coleção.",
+                imagens: [
+                    "Imagens/airforce1.avif",
+                    "Imagens/airforce12.avif",
+                    "Imagens/airforce13.avif",
+                    "Imagens/airforce14.avif"
+                ]
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id') || 'jordan4'; 
+
+        if (produtos[productId]) {
+            const prod = produtos[productId];
+            
+            document.getElementById('page-title').innerText = `${prod.titulo} | La Peace`;
+            document.getElementById('product-title').innerText = prod.titulo;
+            document.getElementById('product-price').innerText = prod.preco;
+            document.getElementById('product-description').innerText = prod.descricao;
+            document.getElementById('main-img').src = prod.imagens[0];
+
+            const thumbContainer = document.getElementById('thumbnail-list');
+            thumbContainer.innerHTML = ''; 
+
+            prod.imagens.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.onclick = () => changeImage(imgSrc);
+                thumbContainer.appendChild(img);
+            });
+        }
+
+        function changeImage(src) {
+            document.getElementById('main-img').src = src;
+        }
+
+        let totalCart = 0;
+        function addToCart() {
+            totalCart++;
+            document.getElementById('cart-count').innerText = totalCart;
+            alert('Produto adicionado ao carrinho!');
+        }
+    </script>
+
+</body>
+
+</html>
